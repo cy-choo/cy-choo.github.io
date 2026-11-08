@@ -585,7 +585,7 @@
     @media (min-width: 861px) {
       .dashboard-col-secondary {
         position: sticky;
-        top: calc(52px + var(--space-outer));
+        top: calc(49px + var(--space-outer));
       }
     }
 
@@ -1141,20 +1141,6 @@
       font-weight: 700;
     }
 
-    @media (max-width: 600px) {
-      .monitor-row-item.twc-row {
-        flex-wrap: wrap;
-        gap: 6px;
-      }
-      .hourly-row-metrics {
-        width: 100%;
-        justify-content: flex-end;
-        border-top: 1px dashed var(--md-sys-color-outline-variant);
-        padding-top: 4px;
-        margin-top: 2px;
-      }
-    }
-
     /* Vertical List for Hourly Forecast */
     .monitor-vertical-list {
       display: flex;
@@ -1168,6 +1154,7 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
+      flex-wrap: nowrap;
       padding: 7px 12px;
       background-color: var(--md-sys-color-surface-container-low);
       border: 1px solid var(--md-sys-color-outline-variant);
@@ -1217,6 +1204,7 @@
       color: var(--md-sys-color-on-surface);
       min-width: 68px;
       flex-shrink: 0;
+      white-space: nowrap;
       font-variant-numeric: tabular-nums;
       letter-spacing: 0.1px;
     }
@@ -1244,6 +1232,19 @@
       display: inline-block;
       vertical-align: middle;
       cursor: default;
+    }
+
+    @media (max-width: 600px) {
+      .monitor-row-item {
+        flex-wrap: nowrap;
+        gap: 6px;
+      }
+      .monitor-row-left {
+        gap: 6px;
+      }
+      .hourly-row-metrics {
+        gap: 8px;
+      }
     }
 
     /* Floating Forecast Description Tooltip (shown when item is overflowing) */
